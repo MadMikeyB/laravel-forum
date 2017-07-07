@@ -2,7 +2,6 @@
 
 namespace Bitporch\Forum\Models;
 
-use Bitporch\Forum\Models\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Kalnoy\Nestedset\NodeTrait;
 

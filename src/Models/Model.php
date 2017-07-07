@@ -2,8 +2,6 @@
 
 namespace Bitporch\Forum\Models;
 
-use Bitporch\Forum\Models\Model;
-
 class Model extends Model
 {
     public static function boot()
