@@ -47,6 +47,7 @@ return [
     'lock'                          => 'Sperren',
     'unsticky'                      => 'Entheften',
     'sticky'                        => 'Anheften',
+    'delete'                        => 'Delete',
 
     // Search
     'search_results'                => 'Ergebnisse durchsuchen',
