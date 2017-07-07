@@ -8,7 +8,7 @@
 
                 @can('manage', $discussion)
                     <div class="pull-right">
-                        <form action="{{ route('forum.discussions.flag', $discussion) }}" method="POST" class="panel-options">
+                        <form action="{{ route('forum.discussions.destroy', $discussion) }}" method="POST" class="panel-options">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
 
