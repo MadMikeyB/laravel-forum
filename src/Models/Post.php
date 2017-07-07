@@ -2,7 +2,7 @@
 
 namespace Bitporch\Forum\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Bitporch\Forum\Models\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
