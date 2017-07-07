@@ -15,6 +15,11 @@
             border: none;
         }
 
+        .forum .navbar .navbar-form {
+            padding-right: 0;
+            margin-right: -15px;
+        }
+
         /* Jumbotron header */
         .forum .jumbotron {
             padding: 24px 0;
