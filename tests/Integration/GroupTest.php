@@ -14,7 +14,7 @@ class GroupTest extends TestCase
         $this->delete(route('forum.groups.destroy', $group->slug))
             ->assertResponseStatus(204);
 
-        $this->dontSeeInDatabase('groups', ['id' => $group->id]);
+        $this->assertNotNull($group->fresh()->deleted_at);
     }
 
     public function testFailToDestroyGroup()

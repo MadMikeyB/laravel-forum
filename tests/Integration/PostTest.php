@@ -65,7 +65,7 @@ class PostTest extends TestCase
             ->assertResponseStatus(302)
             ->assertRedirectedToRoute('forum.discussions.show', $post->discussion->slug)
             ->assertSessionHas('success', 'Post deleted successfully.');
-        $this->dontSeeInDatabase('posts', ['id' => $post->id]);
+        $this->assertNotNull($post->fresh()->deleted_at);
     }
 
     /**
