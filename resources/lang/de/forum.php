@@ -48,6 +48,7 @@ return [
     'unsticky'                      => 'Entheften',
     'sticky'                        => 'Anheften',
     'delete'                        => 'Delete',
+    'edit'                          => 'Edit',
 
     // Search
     'search_results'                => 'Ergebnisse durchsuchen',

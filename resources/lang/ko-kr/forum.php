@@ -48,6 +48,7 @@ return [
     'unsticky'                      => '공지 등록해제',
     'sticky'                        => '공지로 등록하기',
     'delete'                        => 'Delete',
+    'edit'                          => 'Edit',
 
     // Search
     'search_results'                => '검색결과',
