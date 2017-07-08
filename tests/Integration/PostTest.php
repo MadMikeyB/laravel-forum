@@ -46,15 +46,13 @@ class PostTest extends TestCase
      */
     public function a_user_can_update_his_own_post()
     {
-        $this->assertTrue(true);
-
-        // $post = $this->signInAndSeedPost();
-        // $content = $this->faker()->sentence;
-        // $this->put(route('forum.posts.update', $post->id), [
-        //         'content'       => $content,
-        //     ])
-        //     ->assertResponseStatus(302)
-        //     ->assertRedirectedToRoute('forum.discussions.show', $post->discussion->id);
+        $post = $this->signInAndSeedPost();
+        $content = $this->faker()->sentence;
+        $this->put(route('forum.posts.update', $post->id), [
+                'content'       => $content,
+            ])
+            ->assertResponseStatus(302)
+            ->assertRedirectedToRoute('forum.discussions.show', $post->discussion->id);
     }
 
     /**
@@ -62,14 +60,12 @@ class PostTest extends TestCase
      */
     public function a_user_can_erase_his_post()
     {
-        $this->assertTrue(true);
-
-        // $post = $this->signInAndSeedPost();
-        // $this->delete(route('forum.posts.destroy', $post->id))
-        //     ->assertResponseStatus(302)
-        //     ->assertRedirectedToRoute('forum.discussions.show', $post->discussion->id)
-        //     ->assertSessionHas('success', 'Post deleted successfully.');
-        // $this->dontSeeInDatabase('posts', ['id' => $post]);
+        $post = $this->signInAndSeedPost();
+        $this->delete(route('forum.posts.destroy', $post->id))
+            ->assertResponseStatus(302)
+            ->assertRedirectedToRoute('forum.discussions.show', $post->discussion->id)
+            ->assertSessionHas('success', 'Post deleted successfully.');
+        $this->dontSeeInDatabase('posts', ['id' => $post->id]);
     }
 
     /**
